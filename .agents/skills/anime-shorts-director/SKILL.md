@@ -16,5 +16,6 @@ For specialist support follow [skill-pack routing](../../../docs/ANIMATION_SKILL
 Load only the guides needed for the shot.
 
 - [Staging and look](references/staging-and-look.md) for style, lighting, composition, and camera design across engines.
+- [HD-2D pixel cinema](references/hd2d-pixel-cinema.md) for the selectable pixel-anime look, visual depth, camera beat choices, shot timing, and sequel continuity.
 - [Action and editing](references/action-and-editing.md) for pose timing, smears, contact, sound, and loop closure.
 - [Quality pass](references/quality-pass.md) for a targeted review and upstream sources.

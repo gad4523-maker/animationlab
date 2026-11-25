@@ -43,7 +43,7 @@ G:\AnimationLab\pipeline\
 ├── core\                        # Shared WebGL2 & Canvas2D modules
 │   ├── postprocess.js           # HalfFloat HDR render target, DOF, 18-tap bloom, ACES Filmic, vignette
 │   ├── assets.js                # 3D-space FBM procedural Earth, Fresnel glow, Doppler accretion disc, dipoles
-│   ├── camera.js                # C1 Catmull-Rom splines, damped shake, 9:16 aspect-aware framing helpers
+│   ├── camera.js                # Time-aware C1 Hermite paths, paced holds, deterministic shake, 9:16 framing
 │   ├── overlay_hud.js           # Shorts-safe broadcast HUD (12.5% right rail guard, stat card, callouts)
 │   ├── anime_rig.js             # Legacy Canvas2D action blocking and compatible episodes
 │   ├── cel_humanoid.js          # Skinned VRM 0.x cel characters, world-space limb IK and expression morphs
@@ -129,6 +129,10 @@ Top-level episode configuration:
 ---
 
 - `render_dependencies`: Optional extra files or directories outside the episode whose contents affect a shot. Local episode assets and the shared renderer sources are tracked automatically.
+
+### HD-2D pixel cinema and camera pacing
+
+For cinematic pixel-anime shots, read the director's [HD-2D pixel cinema guide](../.agents/skills/anime-shorts-director/references/hd2d-pixel-cinema.md). The shared `core/camera.js` uses time-aware continuous Hermite paths rather than uneven-time Catmull-Rom; optional `pace` (0–1.5) scales a keyframe's travel speed, and `hold: true` settles it for a reaction beat. Keep the camera driven by shot intent; this look is optional and does not replace other styles.
 
 ## 4. Writing Scene Modules (`web3d` / `anime2d`)
 

@@ -77,7 +77,11 @@ node "G:\AnimationLab\templates\threejs-short-starter\render.mjs"
 
 ---
 
-## 4. Animation skills and asset policy
+## 4. Anime HD-2D look and camera language
+
+The [HD-2D pixel cinema guide](.agents/skills/anime-shorts-director/references/hd2d-pixel-cinema.md) adds a selectable layered pixel-anime style and story-aware camera pacing. Both render pipelines now use time-aware smooth camera motion with optional holds. Other art styles remain available.
+
+## 5. Animation skills and asset policy
 
 - **Three supplemental skill packs** (motion direction, story-driven shorts, Blender production) are pinned as optional Git submodules. See [animation skill routing and setup](docs/ANIMATION_SKILLS.md). The primary production director remains [anime-shorts-director](.agents/skills/anime-shorts-director/SKILL.md); third-party instructions do not override episode requirements.
 - **Strict visual generation policy:** No generative AI image or video creation at any stage—not for finished footage, sprites, sprite sheets, textures, backgrounds, keyframes or concept art. Use authored procedural/code-rendered visuals, manually made artwork, or legitimately licensed human-created assets, then animate them with the production engines. No static-image slideshows. TTS and audio processing remain available.
