@@ -108,9 +108,10 @@ def cmd_init(args):
     if not src_tpl.is_dir():
         raise SystemExit(f"Unknown template '{tpl}'. Available: {[d.name for d in (PIPELINE_ROOT / 'templates').iterdir() if d.is_dir()]}")
     dst = Path(args.dir).resolve()
-    if dst.exists() and any(dst.iterdir()):
+    if dst.exists() and (not dst.is_dir() or any(dst.iterdir())):
         raise SystemExit(f"Target directory already exists and is non-empty: {dst}")
-    shutil.copytree(src_tpl, dst)
+    # Accept a pre-created empty project directory without overwriting its files.
+    shutil.copytree(src_tpl, dst, dirs_exist_ok=True)
     ep_file = dst / "episode.json"
     if ep_file.exists() and args.id:
         ep = json.loads(ep_file.read_text(encoding="utf-8"))
@@ -153,18 +154,19 @@ def _render_episode(ep_dir, force, draft, no_whisperx, allow_red_qc):
     ep_id = ep["episode_id"]
     w = int(ep.get("width", 1080))
     h = int(ep.get("height", 1920))
-    if draft:
-        w, h = max(2, w // 4 * 2), max(2, h // 4 * 2)
+    fps = int(ep.get("fps", 30))
     if w <= 0 or h <= 0 or w % 2 or h % 2:
         raise ValueError("Video dimensions must be positive and even for yuv420p")
+    if fps <= 0:
+        raise ValueError("Video fps must be a positive integer")
+    if draft:
+        w, h = max(2, w // 4 * 2), max(2, h // 4 * 2)
     ids = [shot["id"] for shot in ep["shots"]]
     if not ids or len(ids) != len(set(ids)):
         raise ValueError("An episode requires nonempty, unique shot IDs")
     for stem in [ep_id, *ids]:
         if not stem or stem in (".", "..") or Path(stem).name != stem or Path(stem).is_reserved():
             raise ValueError(f"Invalid episode or shot filename {stem!r}")
-    fps = int(ep.get("fps", 30))
-
     work_dir = ep_dir / "work"
     out_dir = ep_dir / "out"
     if draft:
