@@ -8,7 +8,7 @@
 
 ## 1. Production Architecture (`1080×1920 @ 30 FPS`)
 
-- **Active Multi-Engine Production Pipeline:** `G:\AnimationLab\pipeline\` (documented in [pipeline\README.md](file:///G:/AnimationLab/pipeline/README.md)) — JSON-driven `episode.json` orchestration supporting `web3d` (Three.js 0.170 HDR + HUD), `anime2d` (Canvas2D IK rig), `godot`, and `blender` shots with offline Kokoro ONNX TTS, CUDA WhisperX alignment, monotonic ASS karaoke subtitles, procedural SFX + EBU R128 mastering, and `film_gate.py` QC.
+- **Active Multi-Engine Production Pipeline:** `G:\AnimationLab\pipeline\` (documented in [pipeline/README.md](pipeline/README.md)) — JSON-driven `episode.json` orchestration supporting `web3d` (Three.js 0.170 HDR + HUD), `anime2d` (Canvas2D IK rig), `godot`, and `blender` shots with offline Kokoro ONNX TTS, CUDA WhisperX alignment, monotonic ASS karaoke subtitles, procedural SFX + EBU R128 mastering, and `film_gate.py` QC.
 - **Primary Core Engine:** **Three.js (WebGL2) + Canvas2D / SVG / HTML** captured deterministically via headless Chromium + Playwright (`--use-gl=angle --use-angle=default`) and piped straight to FFmpeg H.264. Start new Shorts with `animpipe.ps1 init` (or `templates\threejs-short-starter\`).
 - **Style & Motion Libraries (Preserved):**
   - `experimental\lemo-opuscar` (99 curated style definitions)
@@ -74,3 +74,11 @@ powershell -ExecutionPolicy Bypass -File "G:\AnimationLab\pipeline\bin\animpipe.
 # Render a new Three.js + HUD Short from the standalone starter template
 node "G:\AnimationLab\templates\threejs-short-starter\render.mjs"
 ```
+
+---
+
+## 4. Animation skills and asset policy
+
+- **Three supplemental skill packs** (motion direction, story-driven shorts, Blender production) are pinned as optional Git submodules. See [animation skill routing and setup](docs/ANIMATION_SKILLS.md). The primary production director remains [anime-shorts-director](.agents/skills/anime-shorts-director/SKILL.md); third-party instructions do not override episode requirements.
+- **Actual animation is required.** AI-generated individual sprites, sprite sheets, textures and still assets may be used as licensed building blocks; no fully AI-generated video shots or static slideshows as the finished animation. Honor stricter episode rules.
+- **Source checkout is not a complete Windows install:** tool binaries, CUDA model weights, Python environments and private media are intentionally not in Git. See [source layout](SOURCE-LAYOUT.md). For Gemini's CPU-only cloud, use [animationlab-portable](https://github.com/gad4523-maker/animationlab-portable).

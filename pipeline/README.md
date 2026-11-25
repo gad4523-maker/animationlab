@@ -2,7 +2,7 @@
 
 Deterministic, JSON-driven `1080×1920 @ 30 fps` multi-engine YouTube Shorts pipeline designed for Windows 11 + NVIDIA RTX 4060 (8 GB VRAM) / 16 GB RAM.
 
-> **Content Policy:** 100% programmatic / procedural Three.js WebGL2 shaders, Canvas2D rigs, Godot/Blender adapters, and human-authored/permissively licensed assets. Zero AI-generated images or AI-generated video.
+> **Content Policy:** Finished Shorts must be animated with the pipeline (Three.js/Canvas2D, Godot, Blender or other supported animation tools). AI-generated **individual sprites, sprite sheets, textures, backgrounds and other still assets are allowed** as scene components, subject to license/rights checks. **Do not use fully AI-generated video shots or substitute still-image slideshows for animation.** Honor stricter per-episode requirements.
 
 ---
 
@@ -154,13 +154,13 @@ export async function initShot({ glCanvas, hudCanvas, width, height, fps, shot, 
 
 ## 5. Character production and external engines
 
-Use the [Signal Break source](demos/demo_04_signal_break/episode.json) for a complete Three.js shot example. The rig accepts an unscaled VRM 0.x humanoid with embedded textures and standard limbs. Bind poses drive the cel mesh, world-space hand and foot targets drive IK, and VRM expression groups drive the face. The demo authors poses and spring-bone offsets on the frame clock. Read the [project-local Codex skill](../.agents/skills/anime-shorts-director/SKILL.md) for shot and renderer selection.
+Use the [Signal Break source](demos/demo_04_signal_break/episode.json) for a complete Three.js shot example. The rig accepts an unscaled VRM 0.x humanoid with embedded textures and standard limbs. Bind poses drive the cel mesh, world-space hand and foot targets drive IK, and VRM expression groups drive the face. The demo authors poses and spring-bone offsets on the frame clock. Read the [project-local director skill](../.agents/skills/anime-shorts-director/SKILL.md) and [specialist pack guide](../docs/ANIMATION_SKILLS.md) for shot and renderer selection.
 
 Godot requires `project.godot` at the root of `godot_project`. Set `scene_path` to a project-relative path or a `res://` URI when the shot needs a different scene. The adapter imports a temporary project copy headlessly and captures with the project's graphics renderer. A shot script can find `--animpipe-config` and its path via `OS.get_cmdline_user_args()`, then read a JSON object with width, height, fps, frames, and params.
 
 Blender receives the shot configuration filename after `--`. The JSON has width, height, fps, frames, frames_dir, and params. Write `f_0001.png` and subsequent numbered frames into frames_dir. If the shot specifies `blend_file`, it loads before the shot script. The adapter rejects missing frames and reports Python failures.
 
-The adapters publish limited-range SDR BT.709 shots. Use SDR display-referred frames and a reference swatch when moving a look across engines. Match key light, palette and contrast in the scenes themselves. FFmpeg normalizes dimensions, frame rate, timebase, square pixels and pixel format before stitching.
+The adapters publish limited-range SDR BT.709 shots. Use SDR display-referred frames and a reference swatch when moving a look across engines. Match key light, palette and contrast in the scenes themselves. FFmpeg normalizes dimensions, frame rate, timebase, square pixels and pixel format before stitching. For crossfades it resets shot PTS and applies FPS before timebase normalization, so `xfade` receives constant-frame-rate input.
 
 Audio mastering measures loudness and true peak, then applies one linear gain stage with a −2.3 dBTP ceiling before AAC. A transient-heavy mix can land below −14 LUFS. Adjust cue or bed levels to change that balance.
 

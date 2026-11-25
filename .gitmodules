@@ -46,3 +46,12 @@
 [submodule "_archive-repos-rhubarb-lip-sync"]
 	path = _archive/repos/rhubarb-lip-sync
 	url = https://github.com/DanielSWolf/rhubarb-lip-sync.git
+[submodule "agent-skill-motion-design"]
+	path = .agents/upstream/motion-design-skills
+	url = https://github.com/iart-ai/motion-design-skills.git
+[submodule "agent-skill-animated-shorts"]
+	path = .agents/upstream/claude-animated-shorts
+	url = https://github.com/mromidev/claude-animated-shorts.git
+[submodule "agent-skill-blender"]
+	path = .agents/upstream/blender-skills
+	url = https://github.com/arjun988/blender-skills.git
