@@ -1,0 +1,196 @@
+{
+  "timestamp": "2026-11-25T00:39:20.236667",
+  "disk_before": {
+    "C_free_gb": 13.539,
+    "G_free_gb": 50.176,
+    "G_used_gb": 295.853
+  },
+  "disk_after": {
+    "C_free_gb": 13.539,
+    "G_free_gb": 63.199,
+    "G_used_gb": 282.83
+  },
+  "recovered_gb_from_removals": 12.963,
+  "recovered_mb_from_removals": 12362.32,
+  "recovered_gib_from_removals": 12.073,
+  "archived_repos_total_mb": 1671.27,
+  "removed": [
+    {
+      "category": "duplicate_venv",
+      "path": "G:\\AnimationLab\\envs\\depth-anything-v2",
+      "bytes": 7870850726,
+      "mb": 7506.23
+    },
+    {
+      "category": "duplicate_venv",
+      "path": "G:\\AnimationLab\\envs\\pyscenedetect",
+      "bytes": 206580107,
+      "mb": 197.01
+    },
+    {
+      "category": "regenerable_cache",
+      "path": "G:\\AnimationLab\\.cache\\wheels",
+      "bytes": 3473638869,
+      "mb": 3312.72
+    },
+    {
+      "category": "regenerable_cache",
+      "path": "G:\\AnimationLab\\.cache\\npm",
+      "bytes": 482015165,
+      "mb": 459.69
+    },
+    {
+      "category": "regenerable_cache",
+      "path": "G:\\AnimationLab\\.cache\\pip",
+      "bytes": 320636749,
+      "mb": 305.78
+    },
+    {
+      "category": "temp_file",
+      "path": "G:\\AnimationLab\\.cache\\eevee_test.png",
+      "bytes": 107257,
+      "mb": 0.1
+    },
+    {
+      "category": "temp_file",
+      "path": "G:\\AnimationLab\\.cache\\eevee_comp_test.png",
+      "bytes": 107866,
+      "mb": 0.1
+    },
+    {
+      "category": "build_cache",
+      "path": "G:\\AnimationLab\\StyleBenchmark\\styles\\remotion\\.cache",
+      "bytes": 257087273,
+      "mb": 245.18
+    },
+    {
+      "category": "temp_render_output",
+      "path": "G:\\AnimationLab\\StyleBenchmark\\styles\\motion-canvas\\output",
+      "bytes": 61913804,
+      "mb": 59.05
+    },
+    {
+      "category": "build_cache",
+      "path": "G:\\AnimationLab\\StyleBenchmark\\styles\\motion-canvas\\.vite",
+      "bytes": 13516711,
+      "mb": 12.89
+    },
+    {
+      "category": "disposable_probe",
+      "path": "G:\\AnimationLab\\sandboxes\\pixi-suite\\official-compat-probe",
+      "bytes": 90175896,
+      "mb": 86.0
+    },
+    {
+      "category": "temp_dir_contents",
+      "path": "G:\\AnimationLab\\.cache\\tmp",
+      "bytes": 186204056,
+      "mb": 177.58
+    },
+    {
+      "category": "empty_dir",
+      "path": "G:\\AnimationLab\\portable\\pixelorama",
+      "bytes": 0,
+      "mb": 0.0
+    },
+    {
+      "category": "empty_dir",
+      "path": "G:\\AnimationLab\\models\\huggingface",
+      "bytes": 0,
+      "mb": 0.0
+    },
+    {
+      "category": "empty_dir",
+      "path": "G:\\AnimationLab\\godot-and-vfx",
+      "bytes": 0,
+      "mb": 0.0
+    }
+  ],
+  "archived": [
+    {
+      "from": "G:\\AnimationLab\\engines\\remotion",
+      "to": "G:\\AnimationLab\\_archive\\repos\\remotion",
+      "bytes": 901580965,
+      "mb": 859.81,
+      "reason": "Upstream monorepo source never imported; sandbox uses npm packages"
+    },
+    {
+      "from": "G:\\AnimationLab\\godot-and-vfx\\godot-demo-projects",
+      "to": "G:\\AnimationLab\\_archive\\repos\\godot-demo-projects",
+      "bytes": 541164342,
+      "mb": 516.09,
+      "reason": "Official demo repo; active Godot projects run cleanly without it"
+    },
+    {
+      "from": "G:\\AnimationLab\\character-tools\\rhubarb-lip-sync",
+      "to": "G:\\AnimationLab\\_archive\\repos\\rhubarb-lip-sync",
+      "bytes": 230290775,
+      "mb": 219.62,
+      "reason": "Upstream C++ source repo; portable/rhubarb executable used in production"
+    },
+    {
+      "from": "G:\\AnimationLab\\engines\\pixijs",
+      "to": "G:\\AnimationLab\\_archive\\repos\\pixijs",
+      "bytes": 70413872,
+      "mb": 67.15,
+      "reason": "Upstream source repo; pixi-suite uses npm pixi.js@8.23.0"
+    },
+    {
+      "from": "G:\\AnimationLab\\engines\\motion-canvas",
+      "to": "G:\\AnimationLab\\_archive\\repos\\motion-canvas",
+      "bytes": 5797377,
+      "mb": 5.53,
+      "reason": "Upstream source repo; motion-canvas-demo uses npm packages"
+    },
+    {
+      "from": "G:\\AnimationLab\\godot-and-vfx\\pixijs-filters",
+      "to": "G:\\AnimationLab\\_archive\\repos\\pixijs-filters",
+      "bytes": 2447905,
+      "mb": 2.33,
+      "reason": "Upstream source repo; pixi-suite uses npm pixi-filters@6.1.5"
+    },
+    {
+      "from": "G:\\AnimationLab\\godot-and-vfx\\pixijs-particle-emitter",
+      "to": "G:\\AnimationLab\\_archive\\repos\\pixijs-particle-emitter",
+      "bytes": 763028,
+      "mb": 0.73,
+      "reason": "Legacy v5 source repo; incompatible with PixiJS 8 (@barvynkoa/particle-emitter used instead)"
+    }
+  ],
+  "preserved_untouched": [
+    "G:\\AnimationLab\\StyleBenchmark",
+    "G:\\AnimationLab\\Chakra Short",
+    "G:\\AnimationLab\\Gravity Short",
+    "G:\\AnimationLab\\Senku - From Stone to Space",
+    "G:\\AnimationLab\\Senku - Genius Who Rebuilt Civilization",
+    "G:\\AnimationLab\\experimental\\lemo-opuscar",
+    "G:\\AnimationLab\\experimental\\huashu-art-motion",
+    "G:\\AnimationLab\\experimental\\anidoodle",
+    "G:\\AnimationLab\\engines\\manim",
+    "G:\\AnimationLab\\character-tools\\pixelorama",
+    "G:\\AnimationLab\\character-tools\\rigby2d",
+    "G:\\AnimationLab\\ai-and-depth\\depth-anything-v2",
+    "G:\\AnimationLab\\ai-and-depth\\whisperx",
+    "G:\\AnimationLab\\ai-and-depth\\pyscenedetect",
+    "G:\\AnimationLab\\portable\\rhubarb",
+    "G:\\AnimationLab\\models",
+    "G:\\AnimationLab\\envs\\whisperx",
+    "G:\\AnimationLab\\envs\\manimgl",
+    "G:\\AnimationLab\\.cache\\torch",
+    "G:\\AnimationLab\\.cache\\nltk_data",
+    "G:\\AnimationLab\\.cache\\huggingface",
+    "G:\\AnimationLab\\.cache\\manim"
+  ],
+  "user_confirmation_candidates_not_deleted": [
+    {
+      "path": "G:\\AnimationLab\\_archive\\repos",
+      "mb": 1671.27,
+      "note": "Quarantined unused upstream git clones; safe to permanently delete if not inspecting engine internals"
+    },
+    {
+      "path": "G:\\AnimationLab\\Senku - Genius Who Rebuilt Civilization\\frames",
+      "mb": 3909.1,
+      "note": "Rendered intermediate PNG frames inside user project Senku - Genius Who Rebuilt Civilization (preserved untouched)"
+    }
+  ]
+}

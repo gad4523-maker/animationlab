@@ -1,0 +1,38 @@
+{
+  "episode_id": "demo_02_anime_action",
+  "title": "Limit Break Strike",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "voice": "",
+  "audio_mood": "action",
+  "shots": [
+    {
+      "id": "shot_01_coil",
+      "engine": "anime2d",
+      "scene_module": "scenes/shot_01_coil.js",
+      "duration_sec": 2.8,
+      "narration": "",
+      "transition": { "type": "cut", "duration_sec": 0.0 },
+      "sfx_cues": [
+        { "at_norm": 0.05, "type": "charge", "duration_sec": 2.5, "gain": 0.65 },
+        { "at_norm": 0.55, "type": "electric", "duration_sec": 1.2, "gain": 0.48 }
+      ],
+      "params": {}
+    },
+    {
+      "id": "shot_02_strike",
+      "engine": "anime2d",
+      "scene_module": "scenes/shot_02_strike.js",
+      "duration_sec": 3.2,
+      "narration": "",
+      "transition": { "type": "cut", "duration_sec": 0.0 },
+      "sfx_cues": [
+        { "at_norm": 0.11, "type": "whoosh", "duration_sec": 0.45, "gain": 0.7 },
+        { "at_sec": 0.52, "type": "impact", "duration_sec": 1.4, "gain": 0.95 },
+        { "at_norm": 0.36, "type": "electric", "duration_sec": 1.5, "gain": 0.55 }
+      ],
+      "params": {}
+    }
+  ]
+}

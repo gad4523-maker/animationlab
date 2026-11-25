@@ -1,0 +1,363 @@
+{
+  "skeleton": {
+    "hash": "goku",
+    "spine": "4.3.0",
+    "x": -240,
+    "y": 0,
+    "width": 480,
+    "height": 680
+  },
+  "bones": [
+    {
+      "name": "root"
+    },
+    {
+      "name": "hip",
+      "parent": "root",
+      "y": 290,
+      "rotation": 90
+    },
+    {
+      "name": "chest",
+      "parent": "hip",
+      "length": 220,
+      "x": 20
+    },
+    {
+      "name": "head",
+      "parent": "chest",
+      "length": 140,
+      "x": 210
+    },
+    {
+      "name": "hair",
+      "parent": "head",
+      "x": 92
+    },
+    {
+      "name": "leg_l",
+      "parent": "root",
+      "x": -52,
+      "y": 290,
+      "rotation": -104
+    },
+    {
+      "name": "leg_r",
+      "parent": "root",
+      "x": 52,
+      "y": 290,
+      "rotation": -76
+    },
+    {
+      "name": "arm_l",
+      "parent": "chest",
+      "x": 195,
+      "y": 82,
+      "rotation": 152
+    },
+    {
+      "name": "arm_r",
+      "parent": "chest",
+      "x": 195,
+      "y": -82,
+      "rotation": -152
+    },
+    {
+      "name": "sash",
+      "parent": "hip",
+      "x": -10,
+      "y": 15,
+      "rotation": 175
+    }
+  ],
+  "slots": [
+    {
+      "name": "leg_l",
+      "bone": "leg_l",
+      "attachment": "leg_l"
+    },
+    {
+      "name": "leg_r",
+      "bone": "leg_r",
+      "attachment": "leg_r"
+    },
+    {
+      "name": "sash",
+      "bone": "sash",
+      "attachment": "sash"
+    },
+    {
+      "name": "torso",
+      "bone": "chest",
+      "attachment": "torso"
+    },
+    {
+      "name": "arm_l",
+      "bone": "arm_l",
+      "attachment": "arm_l"
+    },
+    {
+      "name": "arm_r",
+      "bone": "arm_r",
+      "attachment": "arm_r"
+    },
+    {
+      "name": "hair",
+      "bone": "hair",
+      "attachment": "hair_base"
+    },
+    {
+      "name": "head",
+      "bone": "head",
+      "attachment": "head"
+    }
+  ],
+  "skins": [
+    {
+      "name": "default",
+      "attachments": {
+        "torso": {
+          "torso": {
+            "x": 115,
+            "y": 0,
+            "rotation": -90,
+            "width": 220,
+            "height": 260
+          }
+        },
+        "leg_l": {
+          "leg_l": {
+            "x": 135,
+            "y": 0,
+            "rotation": 90,
+            "width": 114,
+            "height": 280
+          }
+        },
+        "leg_r": {
+          "leg_r": {
+            "x": 135,
+            "y": 0,
+            "rotation": 90,
+            "width": 114,
+            "height": 280
+          }
+        },
+        "arm_l": {
+          "arm_l": {
+            "x": 105,
+            "y": 0,
+            "rotation": 90,
+            "width": 96,
+            "height": 230
+          }
+        },
+        "arm_r": {
+          "arm_r": {
+            "x": 105,
+            "y": 0,
+            "rotation": 90,
+            "width": 96,
+            "height": 230
+          }
+        },
+        "sash": {
+          "sash": {
+            "x": 70,
+            "y": 0,
+            "rotation": 90,
+            "width": 60,
+            "height": 160
+          }
+        },
+        "head": {
+          "head": {
+            "x": 65,
+            "y": 0,
+            "rotation": -90,
+            "width": 160,
+            "height": 155
+          }
+        },
+        "hair": {
+          "hair_base": {
+            "x": 55,
+            "y": 0,
+            "rotation": -90,
+            "width": 320,
+            "height": 230
+          },
+          "hair_ssj": {
+            "x": 70,
+            "y": 0,
+            "rotation": -90,
+            "width": 320,
+            "height": 250
+          }
+        }
+      }
+    }
+  ],
+  "animations": {
+    "transform": {
+      "slots": {
+        "hair": {
+          "attachment": [
+            {
+              "time": 0.0,
+              "name": "hair_base"
+            },
+            {
+              "time": 1.8,
+              "name": "hair_ssj"
+            },
+            {
+              "time": 1.92,
+              "name": "hair_base"
+            },
+            {
+              "time": 2.1,
+              "name": "hair_ssj"
+            },
+            {
+              "time": 2.22,
+              "name": "hair_base"
+            },
+            {
+              "time": 2.35,
+              "name": "hair_ssj"
+            },
+            {
+              "time": 2.46,
+              "name": "hair_base"
+            },
+            {
+              "time": 2.8,
+              "name": "hair_ssj"
+            }
+          ]
+        }
+      },
+      "bones": {
+        "hip": {
+          "translate": [
+            {
+              "time": 0.0,
+              "y": 0
+            },
+            {
+              "time": 1.2,
+              "y": -25
+            },
+            {
+              "time": 2.75,
+              "y": -45
+            },
+            {
+              "time": 2.95,
+              "y": 15
+            },
+            {
+              "time": 5.0,
+              "y": 0
+            }
+          ],
+          "rotate": [
+            {
+              "time": 0.0,
+              "value": 0
+            },
+            {
+              "time": 2.75,
+              "value": -12
+            },
+            {
+              "time": 2.95,
+              "value": 10
+            },
+            {
+              "time": 5.0,
+              "value": 4
+            }
+          ]
+        },
+        "arm_l": {
+          "rotate": [
+            {
+              "time": 0.0,
+              "value": 0
+            },
+            {
+              "time": 1.5,
+              "value": -22
+            },
+            {
+              "time": 2.75,
+              "value": -35
+            },
+            {
+              "time": 2.95,
+              "value": 48
+            },
+            {
+              "time": 5.0,
+              "value": 36
+            }
+          ]
+        },
+        "arm_r": {
+          "rotate": [
+            {
+              "time": 0.0,
+              "value": 0
+            },
+            {
+              "time": 1.5,
+              "value": 22
+            },
+            {
+              "time": 2.75,
+              "value": 35
+            },
+            {
+              "time": 2.95,
+              "value": -48
+            },
+            {
+              "time": 5.0,
+              "value": -36
+            }
+          ]
+        },
+        "sash": {
+          "rotate": [
+            {
+              "time": 0.0,
+              "value": 0
+            },
+            {
+              "time": 1.4,
+              "value": 18
+            },
+            {
+              "time": 2.8,
+              "value": 42
+            },
+            {
+              "time": 3.5,
+              "value": 28
+            },
+            {
+              "time": 4.2,
+              "value": 46
+            },
+            {
+              "time": 5.0,
+              "value": 32
+            }
+          ]
+        }
+      }
+    }
+  }
+}

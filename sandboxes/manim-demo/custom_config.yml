@@ -1,0 +1,5 @@
+directories:
+  base: "G:\\AnimationLab\\sandboxes\\manim-demo"
+  cache: "G:\\AnimationLab\\.cache\\manim"
+file_writer:
+  ffmpeg_bin: "C:\\Users\\User\\AppData\\Local\\Microsoft\\WinGet\\Links\\ffmpeg.exe"

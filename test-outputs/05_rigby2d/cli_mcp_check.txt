@@ -1,0 +1,73 @@
+=== rigby.js --help (exit=0) ===
+Rigby2D command-line tool 0.6.0
+
+Usage: rigby <command> [arguments] [--json]
+
+Commands:
+  inspect     Summarize a project: counts, animations, skins, constraints, film settings
+  rig         Show the bone hierarchy (setup pose), the slots in draw order and the skins
+  animation   Show one animation: duration and the key times of every timeline
+  pose        Evaluate the skeleton (setup pose, or an animation at a time): world bones, attachments, bounds
+  validate    Check a project for problems (exit code 1 when it is invalid)
+  convert     Convert between .rigby, skeleton JSON (3.8 / 4.2 / 4.3) and binary .skel
+  export      Export for games: skeleton + packed atlas, a Defold model, or sprite sheets
+  import-psd  Turn a layered PSD into a .rigby work file (one slot per layer, laid out as drawn)
+  autorig     Rig layered artwork in one step (a PSD, or an unrigged .rigby): bones, meshes, weights, IK
+  run         Run a Python script with the rigby scripting API against a project, then save it
+  render      Render animations to MP4, WebM, a PNG sequence or GIF on the GPU
+  tools       List the operations `rigby call` can run (the MCP server tools)
+  call        Run any MCP tool: add_bone, set_bone_key, batch_edit, retarget_animation, lip_sync, ...
+
+Options for every command:
+  --json        Print the result as JSON (errors too: {"error": ...}).
+  -q, --quiet   No progress messages.
+  -h, --help    Help for a command: rigby <command> --help
+
+Exit codes: 0 done, 1 failed (or validate found problems), 2 wrong usage.
+Docs: https://rigby2d.com/docs/cli.html
+
+
+=== rigby.js inspect nila.rigby (exit=0) ===
+NILA  (rigby rigby-snapshot/1, film workspace)
+  39 bones, 42 slots, 1 skin(s), 10 constraint(s), 0 event(s), 72 image(s)
+  animations (3):
+    idle                           3s  12 timeline(s)
+    wave                         2.4s  15 timeline(s)
+    promo                    70.5833s  27 timeline(s)
+  constraints: ik_hand_l (ik), ik_foot_l (ik), ik_hand_r (ik), ik_foot_r (ik), braid1-physics (physics), braid2-physics (physics), braid3-physics (physics), earring_r-physics (physics), earring_l-physics (physics), jasmine-physics (physics)
+  film:
+    output:
+      fps: 60
+      width: 1920
+      height: 1080
+      background: transparent
+      framing: camera
+      frame:
+        x: 0
+        y: 1560
+        scale: 3.05
+    poses:
+      - name: Happy, bones: [head], slots: [brow_r, brow_l, mouth, eye_r, eye_l, pupil_r, pupil_l, eye_r_lashes, eye_l_lashes, eye_r_alt, eye_l_alt]
+      - name: Surprised, bones: [head], slots: [brow_r, brow_l, mouth, eye_r, eye_l, pupil_r, pupil_l, eye_r_lashes, eye_l_lashes, eye_r_alt, eye_l_alt]
+      - name: Thinking, bones: [head], slots: [brow_r, brow_l, mouth, eye_r, eye_l, pupil_r, pupil_l, eye_r_lashes, eye_l_lashes, eye_r_alt, eye_l_alt]
+    faceControls:
+      - name: Mood, from: Happy, to: Thinking, value: 0
+    audio:
+      - sound: Nila_voiceover.mp3, animation: promo, offset: 1, volume: 1
+
+
+=== rigby2d-mcp --help (exit=0) ===
+Rigby2D MCP server 0.6.0
+
+Usage: rigby2d-mcp [--root <dir> | <dir>]...
+
+Serves the Model Context Protocol over stdin/stdout for AI assistants.
+  --root <dir>   Folder the tools may access (repeatable; default: current folder).
+  <dir>          The same, without --root.
+  --help         Show this help.
+  --version      Show the version.
+
+Read:  inspect_project, describe_rig, describe_animation, sample_pose, validate_project
+Write: convert_project, add_bone, set_bone_setup, add_animation, set_bone_key,
+       delete_bone_key, set_attachment_key, set_event_key
+

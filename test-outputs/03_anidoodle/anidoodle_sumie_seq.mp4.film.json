@@ -1,0 +1,27 @@
+{
+ "film": "sumiE",
+ "file": "anidoodle_sumie_seq.mp4",
+ "sha256": "f28567935bb0e511416afac1a049c3d50b7bd1366feffdae5d2cddf0cc48fe01",
+ "frames": [
+  240,
+  312
+ ],
+ "scale": 1,
+ "blur": null,
+ "poster": null,
+ "meta": {
+  "title": "Bamboo in wind · sumi-e",
+  "W": 1080,
+  "H": 1080,
+  "fps": 30,
+  "bpm": 120,
+  "durationFrames": 510,
+  "shots": [
+   {
+    "id": "paint",
+    "start": 0,
+    "end": 510
+   }
+  ]
+ }
+}

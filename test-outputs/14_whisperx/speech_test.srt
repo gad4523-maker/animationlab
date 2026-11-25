@@ -1,0 +1,8 @@
+1
+00:00:00,172 --> 00:00:01,916
+Welcome to the animation lab.
+
+2
+00:00:02,958 --> 00:00:09,714
+Today we test lip synchronization, audio timestamps, and scene detection for cinematic anime production.
+

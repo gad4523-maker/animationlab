@@ -1,0 +1,2 @@
+Welcome to the animation lab.
+Today we test lip synchronization, audio timestamps, and scene detection for cinematic anime production.

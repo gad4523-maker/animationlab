@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><style>body{margin:0;overflow:hidden;background:#070a18;}</style></head>
+<body>
+<canvas id="c" width="1024" height="576"></canvas>
+<script>
+const c = document.getElementById('c');
+const ctx = c.getContext('2d');
+const W = 1024, H = 576;
+
+// Sky gradient (far background)
+const sky = ctx.createLinearGradient(0, 0, 0, H);
+sky.addColorStop(0, '#090d24');
+sky.addColorStop(0.55, '#1d2452');
+sky.addColorStop(1, '#3b2d66');
+ctx.fillStyle = sky;
+ctx.fillRect(0, 0, W, H);
+
+// Full Moon (distant)
+const moonGlow = ctx.createRadialGradient(760, 145, 20, 760, 145, 190);
+moonGlow.addColorStop(0, 'rgba(255,248,220,0.95)');
+moonGlow.addColorStop(0.35, 'rgba(210,225,255,0.45)');
+moonGlow.addColorStop(1, 'rgba(50,60,120,0)');
+ctx.fillStyle = moonGlow;
+ctx.beginPath(); ctx.arc(760, 145, 190, 0, Math.PI*2); ctx.fill();
+ctx.fillStyle = '#fff9e6';
+ctx.beginPath(); ctx.arc(760, 145, 62, 0, Math.PI*2); ctx.fill();
+
+// Far mountain silhouette
+ctx.fillStyle = '#1f2347';
+ctx.beginPath();
+ctx.moveTo(0, 410); ctx.lineTo(180, 270); ctx.lineTo(390, 360);
+ctx.lineTo(610, 220); ctx.lineTo(840, 340); ctx.lineTo(1024, 250);
+ctx.lineTo(1024, 576); ctx.lineTo(0, 576); ctx.closePath(); ctx.fill();
+
+// Midground mountain + mist
+ctx.fillStyle = '#2d2852';
+ctx.beginPath();
+ctx.moveTo(0, 440); ctx.lineTo(240, 330); ctx.lineTo(520, 420);
+ctx.lineTo(790, 315); ctx.lineTo(1024, 390);
+ctx.lineTo(1024, 576); ctx.lineTo(0, 576); ctx.closePath(); ctx.fill();
+
+// Midground Torii Gate (right-center)
+ctx.fillStyle = '#781d2b';
+ctx.fillRect(620, 270, 22, 220);
+ctx.fillRect(790, 270, 22, 220);
+ctx.fillRect(590, 265, 252, 22);
+ctx.fillRect(605, 312, 222, 16);
+ctx.fillStyle = '#5c1420';
+ctx.beginPath();
+ctx.moveTo(575, 258); ctx.quadraticCurveTo(716, 282, 857, 258);
+ctx.lineTo(862, 272); ctx.quadraticCurveTo(716, 294, 570, 272);
+ctx.closePath(); ctx.fill();
+
+// Stone ground plane with perspective lines
+const ground = ctx.createLinearGradient(0, 440, 0, H);
+ground.addColorStop(0, '#2a243d');
+ground.addColorStop(1, '#110e1c');
+ctx.fillStyle = ground;
+ctx.fillRect(0, 440, W, H - 440);
+
+ctx.strokeStyle = 'rgba(130,110,180,0.28)';
+ctx.lineWidth = 2;
+for (let i = -4; i <= 6; i++) {
+  ctx.beginPath();
+  ctx.moveTo(512 + i * 35, 440);
+  ctx.lineTo(512 + i * 210, 576);
+  ctx.stroke();
+}
+
+// Foreground stone lantern (left midground)
+ctx.fillStyle = '#3a3454';
+ctx.fillRect(110, 370, 38, 130);
+ctx.fillRect(98, 355, 62, 18);
+ctx.fillStyle = '#ffd166';
+ctx.fillRect(117, 330, 24, 25);
+ctx.fillStyle = '#474066';
+ctx.beginPath(); ctx.moveTo(85, 330); ctx.lineTo(129, 300); ctx.lineTo(173, 330); ctx.closePath(); ctx.fill();
+
+// Foreground Anime Warrior Silhouette (close front-left-center)
+ctx.fillStyle = '#0c0b14';
+// Cape
+ctx.beginPath();
+ctx.moveTo(315, 255); ctx.quadraticCurveTo(210, 390, 170, 550);
+ctx.lineTo(335, 555); ctx.lineTo(355, 265); ctx.closePath(); ctx.fill();
+// Legs
+ctx.fillRect(320, 385, 28, 175);
+ctx.fillRect(372, 385, 28, 175);
+// Torso
+ctx.beginPath();
+ctx.moveTo(305, 255); ctx.lineTo(410, 255); ctx.lineTo(398, 390); ctx.lineTo(318, 390); ctx.closePath(); ctx.fill();
+// Head + spiky anime hair
+ctx.beginPath(); ctx.arc(358, 215, 34, 0, Math.PI*2); ctx.fill();
+ctx.beginPath();
+ctx.moveTo(324, 210); ctx.lineTo(302, 180); ctx.lineTo(338, 188);
+ctx.lineTo(350, 155); ctx.lineTo(372, 182); ctx.lineTo(405, 170);
+ctx.lineTo(392, 208); ctx.closePath(); ctx.fill();
+// Glowing eye
+ctx.fillStyle = '#38e8ff';
+ctx.beginPath(); ctx.ellipse(372, 216, 7, 3, -0.15, 0, Math.PI*2); ctx.fill();
+// Extended arm + glowing katana
+ctx.strokeStyle = '#0c0b14'; ctx.lineWidth = 18; ctx.lineCap = 'round';
+ctx.beginPath(); ctx.moveTo(390, 278); ctx.lineTo(465, 315); ctx.stroke();
+
+ctx.shadowColor = '#00f0ff'; ctx.shadowBlur = 18;
+ctx.strokeStyle = '#b8fbff'; ctx.lineWidth = 5;
+ctx.beginPath(); ctx.moveTo(465, 315); ctx.lineTo(660, 225); ctx.stroke();
+ctx.shadowBlur = 0;
+
+// Foreground rocks bottom right
+ctx.fillStyle = '#09080f';
+ctx.beginPath();
+ctx.moveTo(770, 576); ctx.lineTo(830, 480); ctx.lineTo(940, 465); ctx.lineTo(1024, 510); ctx.lineTo(1024, 576);
+ctx.closePath(); ctx.fill();
+</script>
+</body>
+</html>

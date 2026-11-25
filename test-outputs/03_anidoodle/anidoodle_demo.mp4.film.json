@@ -1,0 +1,27 @@
+{
+ "film": "animeDemo",
+ "file": "anidoodle_demo.mp4",
+ "sha256": "8ec671b0950635e704c7d12030c22b4dcd35c2bc07a9ba58c94a5e4c42c240b3",
+ "frames": [
+  0,
+  72
+ ],
+ "scale": 1,
+ "blur": null,
+ "poster": null,
+ "meta": {
+  "title": "animeDemo",
+  "W": 1920,
+  "H": 1080,
+  "fps": 24,
+  "bpm": 120,
+  "durationFrames": 72,
+  "shots": [
+   {
+    "id": "one",
+    "start": 0,
+    "end": 72
+   }
+  ]
+ }
+}

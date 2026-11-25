@@ -1,0 +1,13 @@
+{
+  "name": "animationlab-pixi-suite",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "pixi.js": "^8.0.0",
+    "pixi-filters": "^6.0.0",
+    "@barvynkoa/particle-emitter": "0.0.1",
+    "playwright-core": "^1.56.0",
+    "esbuild": "^0.25.0"
+  }
+}

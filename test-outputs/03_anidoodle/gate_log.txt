@@ -1,0 +1,16 @@
+QUALITY GATE   film "animeDemo"   adapter "html-player"
+a single self-contained HTML file that plays the film in any browser, offline
+ready: playwright-core@1.63.0, CHROME_PATH override: C:\Program Files\Google\Chrome\Application\chrome.exe
+
+1. DETERMINISM  the same frame, drawn two different ways, is the same frame
+----------------------------------------------------------
+        frame 0: PSNR 59.92 dB
+        frame 6: PSNR 60.38 dB
+  PASS  hash differences within PSNR tolerance (> 45 dB)   min PSNR 59.92 dB
+        DIAGNOSIS: frame 0 is ORDER-DEPENDENT. Drawing frame(s) 6, 13, 19, 26, 32, 39, 45, 52, 58, 65, 71 first changes it.
+                   That is a cache key that does not name everything its pixels depend on,
+                   or state one frame leaves behind for the next.
+  ----  no score in this piece   audio check not applicable
+
+2. CONTRACT  the art core cannot reach a clock, the network or a file
+----------------------------------------------------------

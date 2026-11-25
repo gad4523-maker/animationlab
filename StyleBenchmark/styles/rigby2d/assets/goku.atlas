@@ -1,0 +1,21 @@
+goku.png
+size: 1024, 1024
+filter: Linear, Linear
+torso
+bounds: 4, 4, 220, 260
+leg_l
+bounds: 230, 4, 114, 280
+leg_r
+bounds: 350, 4, 114, 280
+arm_l
+bounds: 470, 4, 96, 230
+arm_r
+bounds: 572, 4, 96, 230
+sash
+bounds: 674, 4, 60, 160
+head
+bounds: 4, 290, 160, 155
+hair_base
+bounds: 170, 290, 320, 230
+hair_ssj
+bounds: 496, 290, 320, 250

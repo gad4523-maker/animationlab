@@ -1,0 +1,4 @@
+interface:
+  display_name: "Anime Shorts Director"
+  short_description: "Direct and verify cinematic AnimationLab Shorts"
+  default_prompt: "Use $anime-shorts-director to plan, stage, or review an AnimationLab anime sequence."

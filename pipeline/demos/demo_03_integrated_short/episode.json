@@ -1,0 +1,53 @@
+{
+  "episode_id": "demo_03_integrated_short",
+  "title": "What If You Fell Into a Black Hole?",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "voice": "am_michael",
+  "voice_speed": 1.08,
+  "subtitle_words": 3,
+  "audio_mood": "cosmic",
+  "allow_blue_purple": true,
+  "shots": [
+    {
+      "id": "shot_01_horizon",
+      "engine": "web3d",
+      "scene_module": "scenes/shot_01_horizon.js",
+      "duration_sec": 4.2,
+      "narration": "Cross the event horizon, and glowing plasma orbits faster than the eye can track.",
+      "transition": { "type": "fadeblack", "duration_sec": 0.20 },
+      "sfx_cues": [
+        { "at_norm": 0.04, "type": "whoosh", "duration_sec": 1.1, "gain": 0.50 },
+        { "at_norm": 0.45, "type": "ui", "duration_sec": 0.4, "gain": 0.40 }
+      ],
+      "params": { "badge": "SINGULARITY // 10 SOLAR MASS", "title": "EVENT HORIZON" }
+    },
+    {
+      "id": "shot_02_spaghetti",
+      "engine": "anime2d",
+      "scene_module": "scenes/shot_02_spaghetti.js",
+      "duration_sec": 4.2,
+      "narration": "Tidal gravity surges billions of times stronger at your feet than at your head.",
+      "transition": { "type": "fadeblack", "duration_sec": 0.22 },
+      "sfx_cues": [
+        { "at_norm": 0.05, "type": "charge", "duration_sec": 2.2, "gain": 0.55 },
+        { "at_norm": 0.50, "type": "impact", "duration_sec": 1.2, "gain": 0.80 }
+      ],
+      "params": {}
+    },
+    {
+      "id": "shot_03_dilation",
+      "engine": "web3d",
+      "scene_module": "scenes/shot_03_dilation.js",
+      "duration_sec": 4.2,
+      "narration": "Outside, centuries race by in seconds as light bends into a final cosmic ring.",
+      "transition": { "type": "cut", "duration_sec": 0.0 },
+      "sfx_cues": [
+        { "at_norm": 0.08, "type": "electric", "duration_sec": 1.2, "gain": 0.40 },
+        { "at_norm": 0.35, "type": "impact", "duration_sec": 1.4, "gain": 0.65 }
+      ],
+      "params": { "badge": "RELATIVITY // T+900 YEARS", "title": "TIME DILATION" }
+    }
+  ]
+}

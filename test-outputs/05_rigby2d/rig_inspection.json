@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "nilaAnims": [
+    "idle",
+    "wave",
+    "hello",
+    "moon",
+    "curious",
+    "happy",
+    "surprised",
+    "thinking",
+    "physics",
+    "whisper",
+    "smooth",
+    "wink"
+  ],
+  "robotAnims": [
+    "hold",
+    "release"
+  ],
+  "nilaBones": 39,
+  "robotBones": 11,
+  "handBone": "hand_r"
+}

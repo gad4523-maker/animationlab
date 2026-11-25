@@ -1,0 +1,4 @@
+{
+  "extends": "G:\\AnimationLab\\sandboxes\\motion-canvas-demo\\node_modules\\@motion-canvas\\2d\\tsconfig.project.json",
+  "include": ["src"]
+}

@@ -1,0 +1,41 @@
+{
+  "title": "What If Earth Stopped Spinning for 5 Seconds?",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration_sec": 15,
+  "theme": {
+    "bg": "#060b18",
+    "accent": "#38bdf8",
+    "warn": "#f97316"
+  },
+  "scenes": [
+    {
+      "id": "hook_orbit",
+      "start_sec": 0.0,
+      "end_sec": 5.0,
+      "badge": "HYPOTHESIS // T+0.0s",
+      "headline": "WHAT IF EARTH STOPPED?",
+      "caption": "At the equator, the atmosphere keeps moving at 1,670 km/h.",
+      "camera": { "dist": 3.4, "yaw_deg": 18, "pitch_deg": 12 }
+    },
+    {
+      "id": "wind_shear",
+      "start_sec": 5.0,
+      "end_sec": 10.0,
+      "badge": "PHYSICS // SUPERSONIC WINDS",
+      "headline": "1,670 KM/H SHOCKWAVE",
+      "caption": "Oceans and air surge eastward while the crust locks still.",
+      "camera": { "dist": 2.6, "yaw_deg": 65, "pitch_deg": 6 }
+    },
+    {
+      "id": "rebuild_spin",
+      "start_sec": 10.0,
+      "end_sec": 15.0,
+      "badge": "OUTCOME // DAY LENGTH SHIFT",
+      "headline": "A NEW CLIMATE MAP",
+      "caption": "Even five seconds redistributes heat, tides, and sea level.",
+      "camera": { "dist": 3.8, "yaw_deg": 115, "pitch_deg": 18 }
+    }
+  ]
+}

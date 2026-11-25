@@ -1,0 +1,244 @@
+[
+  {
+    "id": 1,
+    "name": "lemo-opuscar",
+    "category": "experimental",
+    "url": "https://github.com/lemomo-ai/lemo-opuscar.git",
+    "local_path": "G:\\AnimationLab\\experimental\\lemo-opuscar",
+    "architecture": "Agent Skill + Style Film Workbench (JS/HTML/Playwright)",
+    "branch": "main",
+    "commit_short": "f9e2042",
+    "commit_full": "f9e204293930952b61ba921cd8944d05f121beee",
+    "license_files": [
+      "LICENSES",
+      "LICENSE"
+    ],
+    "license_header": ""
+  },
+  {
+    "id": 2,
+    "name": "huashu-art-motion",
+    "category": "experimental",
+    "url": "https://github.com/alchaincyf/huashu-art-motion.git",
+    "local_path": "G:\\AnimationLab\\experimental\\huashu-art-motion",
+    "architecture": "Agent Skill + Procedural Art Motion Templates (JS/Canvas)",
+    "branch": "main",
+    "commit_short": "a97c450",
+    "commit_full": "a97c45018d46e950d56d61981138e08f4e092909",
+    "license_files": [
+      "LICENSE"
+    ],
+    "license_header": ""
+  },
+  {
+    "id": 3,
+    "name": "anidoodle",
+    "category": "experimental",
+    "url": "https://github.com/alexgreensh/anidoodle.git",
+    "local_path": "G:\\AnimationLab\\experimental\\anidoodle",
+    "architecture": "Agent Skill + Deterministic TS/Canvas Engine",
+    "branch": "main",
+    "commit_short": "4ae27d2",
+    "commit_full": "4ae27d2c281fcfd01bce87ab13dc5ad4df81a795",
+    "license_files": [
+      "LICENSE"
+    ],
+    "license_header": ""
+  },
+  {
+    "id": 4,
+    "name": "manim",
+    "category": "engines",
+    "url": "https://github.com/3b1b/manim.git",
+    "local_path": "G:\\AnimationLab\\engines\\manim",
+    "architecture": "Python OpenGL Mathematical Animation Engine (ManimGL)",
+    "branch": "master",
+    "commit_short": "fafa083",
+    "commit_full": "fafa083a4fb274bba9cabde0b6e2f50ba6da0622",
+    "license_files": [
+      "LICENSE.md"
+    ],
+    "license_header": ""
+  },
+  {
+    "id": 5,
+    "name": "rigby2d",
+    "category": "character-tools",
+    "url": "https://github.com/jaisurya-dev-art/rigby2d.git",
+    "local_path": "G:\\AnimationLab\\character-tools\\rigby2d",
+    "architecture": "2D Skeletal Editor + JS/Godot/Rust Runtimes + MCP",
+    "branch": "develop",
+    "commit_short": "1971cf5",
+    "commit_full": "1971cf5e2d4c7e6e2b60891dd692f91454420a7d",
+    "license_files": [
+      "LICENSE-APACHE",
+      "LICENSE-MIT"
+    ],
+    "license_header": "                                 Apache License |                            Version 2.0, January 2004 |                         http://www.apache.org/licenses/ |  |    TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION"
+  },
+  {
+    "id": 6,
+    "name": "pixijs",
+    "category": "engines",
+    "url": "https://github.com/pixijs/pixijs.git",
+    "local_path": "G:\\AnimationLab\\engines\\pixijs",
+    "architecture": "TypeScript/WebGL2/WebGPU 2D Renderer Library (v8)",
+    "branch": "dev",
+    "commit_short": "16011d7",
+    "commit_full": "16011d73d81678fa8c48f256ad36de7db7f90ce9",
+    "license_files": [
+      "LICENSE"
+    ],
+    "license_header": ""
+  },
+  {
+    "id": 7,
+    "name": "pixijs-filters",
+    "category": "godot-and-vfx",
+    "url": "https://github.com/pixijs/filters.git",
+    "local_path": "G:\\AnimationLab\\godot-and-vfx\\pixijs-filters",
+    "architecture": "TypeScript Shader Filter Library for PixiJS (v6)",
+    "branch": "main",
+    "commit_short": "e9d1ca9",
+    "commit_full": "e9d1ca987864f121680bb0d7e9612c05b37748de",
+    "license_files": [
+      "LICENSE"
+    ],
+    "license_header": ""
+  },
+  {
+    "id": 8,
+    "name": "pixijs-particle-emitter",
+    "category": "godot-and-vfx",
+    "url": "https://github.com/pixijs-userland/particle-emitter.git",
+    "local_path": "G:\\AnimationLab\\godot-and-vfx\\pixijs-particle-emitter",
+    "architecture": "TypeScript Particle System Library (PixiJS v6/v7)",
+    "branch": "master",
+    "commit_short": "0fffdd9",
+    "commit_full": "0fffdd9d18cabd99e5ee1d5dc94136613d5fcb04",
+    "license_files": [
+      "LICENSE"
+    ],
+    "license_header": ""
+  },
+  {
+    "id": 9,
+    "name": "pixelorama",
+    "category": "character-tools",
+    "url": "https://github.com/Orama-Interactive/Pixelorama.git",
+    "local_path": "G:\\AnimationLab\\character-tools\\pixelorama",
+    "architecture": "Godot 4 GDScript Pixel Art Editor (+ Portable Binary)",
+    "branch": "master",
+    "commit_short": "5609dba",
+    "commit_full": "5609dbacff4daa4c4cc4752d501e2549f40dfe6e",
+    "license_files": [
+      "LICENSE"
+    ],
+    "license_header": ""
+  },
+  {
+    "id": 10,
+    "name": "godot-demo-projects",
+    "category": "godot-and-vfx",
+    "url": "https://github.com/godotengine/godot-demo-projects.git",
+    "local_path": "G:\\AnimationLab\\godot-and-vfx\\godot-demo-projects",
+    "architecture": "Godot 4 Official Demo Project Collection",
+    "branch": "master",
+    "commit_short": "b761b4c",
+    "commit_full": "b761b4cd5718a7118f2c95eb55f181d0a5f004f1",
+    "license_files": [
+      "LICENSE.md"
+    ],
+    "license_header": ""
+  },
+  {
+    "id": 11,
+    "name": "depth-anything-v2",
+    "category": "ai-and-depth",
+    "url": "https://github.com/DepthAnything/Depth-Anything-V2.git",
+    "local_path": "G:\\AnimationLab\\ai-and-depth\\depth-anything-v2",
+    "architecture": "PyTorch Monocular Depth Estimation Model & CLI",
+    "branch": "main",
+    "commit_short": "a561b84",
+    "commit_full": "a561b849ebae10a6f5ef49e26c83cbbcd36c71bf",
+    "license_files": [
+      "LICENSE"
+    ],
+    "license_header": ""
+  },
+  {
+    "id": 12,
+    "name": "remotion",
+    "category": "engines",
+    "url": "https://github.com/remotion-dev/remotion.git",
+    "local_path": "G:\\AnimationLab\\engines\\remotion",
+    "architecture": "React/TypeScript Programmatic Video Framework (Monorepo)",
+    "branch": "main",
+    "commit_short": "970849f",
+    "commit_full": "970849fc1921ed7e0c3175132fe9580e8875ab2f",
+    "license_files": [
+      "LICENSE.md"
+    ],
+    "license_header": ""
+  },
+  {
+    "id": 13,
+    "name": "rhubarb-lip-sync",
+    "category": "character-tools",
+    "url": "https://github.com/DanielSWolf/rhubarb-lip-sync.git",
+    "local_path": "G:\\AnimationLab\\character-tools\\rhubarb-lip-sync",
+    "architecture": "C++ CLI Mouth-Shape Lip Sync Tool (+ Portable Binary)",
+    "branch": "master",
+    "commit_short": "9b9573c",
+    "commit_full": "9b9573cd21b253c9ba58739bbd1aa0b50b991bff",
+    "license_files": [
+      "LICENSE.md"
+    ],
+    "license_header": ""
+  },
+  {
+    "id": 14,
+    "name": "whisperx",
+    "category": "ai-and-depth",
+    "url": "https://github.com/m-bain/whisperX.git",
+    "local_path": "G:\\AnimationLab\\ai-and-depth\\whisperx",
+    "architecture": "Python CUDA/CPU ASR + Forced Word Alignment Pipeline",
+    "branch": "main",
+    "commit_short": "8d8e43b",
+    "commit_full": "8d8e43bf3698dd1df4b011c0f1a8dd1d468ae365",
+    "license_files": [
+      "LICENSE"
+    ],
+    "license_header": ""
+  },
+  {
+    "id": 15,
+    "name": "motion-canvas",
+    "category": "engines",
+    "url": "https://github.com/motion-canvas/motion-canvas.git",
+    "local_path": "G:\\AnimationLab\\engines\\motion-canvas",
+    "architecture": "TypeScript Generator-Based Motion Graphics Framework",
+    "branch": "main",
+    "commit_short": "7b91435",
+    "commit_full": "7b91435c301d530351dcf5ebb91dd139c002e405",
+    "license_files": [
+      "LICENSE"
+    ],
+    "license_header": ""
+  },
+  {
+    "id": 16,
+    "name": "pyscenedetect",
+    "category": "ai-and-depth",
+    "url": "https://github.com/Breakthrough/PySceneDetect.git",
+    "local_path": "G:\\AnimationLab\\ai-and-depth\\pyscenedetect",
+    "architecture": "Python + OpenCV Scene Cut Detection CLI & Library",
+    "branch": "main",
+    "commit_short": "10f0abf",
+    "commit_full": "10f0abf346008b89b33332c5526aaf0a31ddf3ce",
+    "license_files": [
+      "LICENSE"
+    ],
+    "license_header": ""
+  }
+]

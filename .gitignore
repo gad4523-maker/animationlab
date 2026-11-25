@@ -1,0 +1,51 @@
+.cache/
+.runtime/
+.venv/
+venv/
+node_modules/
+__pycache__/
+.godot/
+dist/
+work/
+out/
+output/
+test-outputs/
+*.blend1
+*.blend2
+*.pyc
+*.log
+.env
+.env.*
+.npmrc
+*.pem
+*.pfx
+*.zip
+*.onnx
+*.pth
+*.safetensors
+/envs/
+/models/
+/exports/
+
+# Linked Blender timeline media stays in the local lab.
+/Chakra Short/audio/Full mix.wav
+/Chakra Short/audio/Narration.wav
+/Chakra Short/audio/Original score.wav
+/Chakra Short/audio/Sound design.wav
+/Chakra Short/editing/Picture.mp4
+/Gravity Short/audio/Narration mix stem.wav
+/Gravity Short/audio/Original score.wav
+/Gravity Short/audio/Sound design.wav
+/Gravity Short/editing/Clean master.mp4
+/Senku - Genius Who Rebuilt Civilization/audio/Narration.wav
+/Senku - Genius Who Rebuilt Civilization/audio/Original_Score.wav
+/Senku - Genius Who Rebuilt Civilization/audio/Sound_Design.wav
+/Senku - Genius Who Rebuilt Civilization/work/shot_01_stone_world.mp4
+/Senku - Genius Who Rebuilt Civilization/work/shot_02_revival_science.mp4
+/Senku - Genius Who Rebuilt Civilization/work/shot_03_sulfa_drug.mp4
+/Senku - Genius Who Rebuilt Civilization/work/shot_04_electricity.mp4
+/Senku - Genius Who Rebuilt Civilization/work/shot_05_communication.mp4
+/Senku - Genius Who Rebuilt Civilization/work/shot_06_perseus.mp4
+/Senku - Genius Who Rebuilt Civilization/work/shot_07_space_mission.mp4
+/Senku - Genius Who Rebuilt Civilization/work/shot_08_whyman_lunar.mp4
+/Senku - Genius Who Rebuilt Civilization/work/shot_09_time_machine.mp4

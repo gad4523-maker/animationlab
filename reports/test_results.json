@@ -1,0 +1,534 @@
+{
+  "generated_at": "2026-11-23T01:46:00+05:30",
+  "lab_root": "G:\\AnimationLab",
+  "hardware": {
+    "os": "Microsoft Windows 11 Pro 10.0.26300 (Build 26300)",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12400F",
+    "cores_logical": "6C / 12T",
+    "ram_gb": 15.84,
+    "gpu": "NVIDIA GeForce RTX 4060",
+    "vram_mib": 8188,
+    "nvidia_driver": "617.42",
+    "cuda_toolkit": "12.8 (V12.8.61)",
+    "compute_capability": "8.9",
+    "storage_final_free_gb": {
+      "C": 17.46,
+      "G": 47.48
+    },
+    "animation_lab_total_gb": 24.71
+  },
+  "summary_counts": {
+    "total": 16,
+    "WORKING": 13,
+    "PARTIALLY_WORKING": 3,
+    "BLOCKED": 0,
+    "NOT_TESTED": 0
+  },
+  "tools": [
+    {
+      "id": 1,
+      "name": "Lemo-Opuscar",
+      "category": "experimental",
+      "repo_url": "https://github.com/lemomo-ai/lemo-opuscar.git",
+      "branch": "main",
+      "commit_short": "f9e2042",
+      "local_path": "G:\\AnimationLab\\experimental\\lemo-opuscar",
+      "license": "Multi-license via REUSE.toml: MIT (code), CC BY 4.0 (demo films/stills), CC BY-NC 4.0 (docs/prompts + limited commercial production license)",
+      "architecture": "Agent Skill + Style Film Workbench (ESM/Playwright/Three.js)",
+      "versions": {
+        "repo_package": "2.0.0",
+        "playwright-core": "^1.63.0",
+        "three": "^0.170.0"
+      },
+      "install_status": "INSTALLED",
+      "functional_status": "WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\01_test_lemo_opuscar.ps1",
+      "measured_timings": {
+        "video_render_s": 7.0,
+        "total_pipeline_s": 12.0
+      },
+      "outputs": [
+        {
+          "path": "G:\\AnimationLab\\test-outputs\\01_lemo-opuscar\\lemo_cel_anime_demo.mp4",
+          "bytes": 7113500,
+          "ffprobe": { "codec": "h264", "width": 1280, "height": 720, "fps": "24/1", "frames": 84, "duration_s": 3.5 }
+        },
+        { "path": "G:\\AnimationLab\\test-outputs\\01_lemo-opuscar\\events.json", "bytes": 93 },
+        { "path": "G:\\AnimationLab\\test-outputs\\01_lemo-opuscar\\stills\\t_0.9.jpg", "bytes": 221376 },
+        { "path": "G:\\AnimationLab\\test-outputs\\01_lemo-opuscar\\stills\\t_2.2.jpg", "bytes": 173813 },
+        { "path": "G:\\AnimationLab\\test-outputs\\01_lemo-opuscar\\stills\\t_3.1.jpg", "bytes": 128406 }
+      ],
+      "workarounds_and_notes": "Set LEMO_ANGLE=default (hardware RTX 4060 WebGL ANGLE) because swiftshader ran >60s/frame on CRT shaders; used bundled core/fonts instead of gitignored demo fonts."
+    },
+    {
+      "id": 2,
+      "name": "Huashu Art Motion",
+      "category": "experimental",
+      "repo_url": "https://github.com/alchaincyf/huashu-art-motion.git",
+      "branch": "main",
+      "commit_short": "a97c450",
+      "local_path": "G:\\AnimationLab\\experimental\\huashu-art-motion",
+      "license": "MIT",
+      "architecture": "Agent Skill + Procedural Canvas Motion Engine & Film QC Gate",
+      "versions": {
+        "playwright_browser": "System Chrome via playwright-core",
+        "film_gate": "Python + OpenCV (via envs\\pyscenedetect)"
+      },
+      "install_status": "INSTALLED",
+      "functional_status": "WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\02_test_huashu_art_motion.ps1",
+      "measured_timings": {
+        "render_s": 18.73
+      },
+      "outputs": [
+        {
+          "path": "G:\\AnimationLab\\test-outputs\\02_huashu-art-motion\\huashu_demo.mp4",
+          "bytes": 967053,
+          "ffprobe": { "codec": "h264", "width": 1280, "height": 720, "fps": "24/1", "frames": 96, "duration_s": 4.0 }
+        },
+        { "path": "G:\\AnimationLab\\test-outputs\\02_huashu-art-motion\\huashu_ghibli.png", "bytes": 1226757 },
+        { "path": "G:\\AnimationLab\\test-outputs\\02_huashu-art-motion\\huashu_shinkai.png", "bytes": 437343 },
+        { "path": "G:\\AnimationLab\\test-outputs\\02_huashu-art-motion\\huashu_8bit.png", "bytes": 10566 },
+        { "path": "G:\\AnimationLab\\test-outputs\\02_huashu-art-motion\\film_gate.json", "bytes": 3424 }
+      ],
+      "workarounds_and_notes": "Tested 25_ghibli, 35_shinkai, and 14_8bit scenes in sandbox; ran film_gate.py --json (verdict=pass, gate_light=yellow, blank_run_s=0.0, blue_purple_share=0.0)."
+    },
+    {
+      "id": 3,
+      "name": "Anidoodle",
+      "category": "experimental",
+      "repo_url": "https://github.com/alexgreensh/anidoodle.git",
+      "branch": "main",
+      "commit_short": "4ae27d2",
+      "local_path": "G:\\AnimationLab\\experimental\\anidoodle",
+      "license": "Apache-2.0",
+      "architecture": "Agent Skill + Deterministic TS/Canvas Film Engine",
+      "versions": {
+        "anidoodle-engine": "0.10.1",
+        "esbuild": "0.25.12",
+        "three": "0.170.0",
+        "playwright-core": "1.63.0",
+        "typescript": "5.9.3"
+      },
+      "install_status": "INSTALLED",
+      "functional_status": "PARTIALLY WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\03_test_anidoodle.ps1",
+      "measured_timings": {
+        "npm_install_s": 21.84
+      },
+      "outputs": [
+        {
+          "path": "G:\\AnimationLab\\test-outputs\\03_anidoodle\\anidoodle_demo.mp4",
+          "bytes": 209027,
+          "ffprobe": { "codec": "h264", "width": 1920, "height": 1080, "fps": "24/1", "frames": 72, "duration_s": 3.0 }
+        },
+        {
+          "path": "G:\\AnimationLab\\test-outputs\\03_anidoodle\\anidoodle_sumie_seq.mp4",
+          "bytes": 363532,
+          "ffprobe": { "codec": "h264", "width": 1080, "height": 1080, "fps": "30/1", "frames": 72, "duration_s": 2.4 }
+        },
+        { "path": "G:\\AnimationLab\\test-outputs\\03_anidoodle\\anidoodle_demo_still.png", "bytes": 55754 },
+        { "path": "G:\\AnimationLab\\test-outputs\\03_anidoodle\\anidoodle_sumie_still.png", "bytes": 1785023 },
+        { "path": "G:\\AnimationLab\\test-outputs\\03_anidoodle\\gate_log.txt", "bytes": 1003 }
+      ],
+      "workarounds_and_notes": "Rendering & determinism PASSED (min PSNR 59.92 dB) after patching CHROME_PATH in sandboxes\\anidoodle-demo\\tools\\detect.mjs (upstream missed CHROME_PATH and .exe); tools\\gate.mjs Step 2 (CONTRACT) crashes on Windows C:\\Windows\\System32\\find.exe collision."
+    },
+    {
+      "id": 4,
+      "name": "Manim (3Blue1Brown)",
+      "category": "engines",
+      "repo_url": "https://github.com/3b1b/manim.git",
+      "branch": "master",
+      "commit_short": "fafa083",
+      "local_path": "G:\\AnimationLab\\engines\\manim",
+      "license": "MIT",
+      "architecture": "Python OpenGL Mathematical Animation Engine (ManimGL)",
+      "versions": {
+        "manimgl": "1.7.2",
+        "av": "18.1.1",
+        "wgpu": "0.33.0",
+        "ManimPango": "0.7.1"
+      },
+      "install_status": "INSTALLED",
+      "functional_status": "PARTIALLY WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\04_test_manim.ps1",
+      "measured_timings": {
+        "pip_install_s": 243.74,
+        "initial_render_s": 15.09,
+        "launcher_run_s": 13.43
+      },
+      "outputs": [
+        {
+          "path": "G:\\AnimationLab\\test-outputs\\04_manim\\manimgl_demo.mp4",
+          "bytes": 106193,
+          "ffprobe": { "codec": "h264", "width": 1280, "height": 720, "fps": "24/1", "frames": 102, "duration_s": 4.25 }
+        },
+        { "path": "G:\\AnimationLab\\test-outputs\\04_manim\\manimgl_frame.png", "bytes": 114625 }
+      ],
+      "workarounds_and_notes": "Upstream setup.cfg omits 'av' required at import time (fixed by installing requirements.txt). OpenGL + ManimPango Text/Axes/TracedPath animations work without LaTeX; Tex/MathTex require external LaTeX (omitted to preserve C:\\)."
+    },
+    {
+      "id": 5,
+      "name": "Rigby2D",
+      "category": "character-tools",
+      "repo_url": "https://github.com/jaisurya-dev-art/rigby2d.git",
+      "branch": "develop",
+      "commit_short": "1971cf5",
+      "local_path": "G:\\AnimationLab\\character-tools\\rigby2d",
+      "license": "MIT OR Apache-2.0",
+      "architecture": "2D Skeletal Rigging CLI + MCP Server + PixiJS 8 Runtime",
+      "versions": {
+        "rigby2d": "0.6.0",
+        "pixi.js": "8.23.0"
+      },
+      "install_status": "INSTALLED",
+      "functional_status": "WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\05_test_rigby2d.ps1",
+      "measured_timings": {
+        "render_s": 7.59
+      },
+      "outputs": [
+        {
+          "path": "G:\\AnimationLab\\test-outputs\\05_rigby2d\\rigby2d_rig_demo.mp4",
+          "bytes": 351194,
+          "ffprobe": { "codec": "h264", "width": 1280, "height": 720, "fps": "24/1", "frames": 72, "duration_s": 3.0 }
+        },
+        { "path": "G:\\AnimationLab\\test-outputs\\05_rigby2d\\rigby2d_frame.png", "bytes": 165564 },
+        { "path": "G:\\AnimationLab\\test-outputs\\05_rigby2d\\rig_inspection.json", "bytes": 315 },
+        { "path": "G:\\AnimationLab\\test-outputs\\05_rigby2d\\cli_mcp_check.txt", "bytes": 3611 }
+      ],
+      "workarounds_and_notes": "Bundled runtimes/pixi/rigby-pixi.ts with pixi.js@8.23.0; verified NILA (39 bones, 42 slots, 10 constraints) & Rigbytron animations plus CLI inspect & MCP startup."
+    },
+    {
+      "id": 6,
+      "name": "PixiJS",
+      "category": "engines",
+      "repo_url": "https://github.com/pixijs/pixijs.git",
+      "branch": "dev",
+      "commit_short": "16011d7",
+      "local_path": "G:\\AnimationLab\\engines\\pixijs",
+      "license": "MIT",
+      "architecture": "TypeScript WebGL2/WebGPU 2D Renderer Library",
+      "versions": {
+        "pixi.js": "8.23.0"
+      },
+      "install_status": "INSTALLED",
+      "functional_status": "WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\06_test_pixijs.ps1",
+      "measured_timings": {},
+      "outputs": [
+        {
+          "path": "G:\\AnimationLab\\test-outputs\\06_pixijs\\pixijs_sprite_demo.mp4",
+          "bytes": 310578,
+          "ffprobe": { "codec": "h264", "width": 1280, "height": 720, "fps": "24/1", "frames": 48, "duration_s": 2.0 }
+        },
+        { "path": "G:\\AnimationLab\\test-outputs\\06_pixijs\\pixijs_sprite_frame.png", "bytes": 46416 }
+      ],
+      "workarounds_and_notes": "Tested crisp nearest-neighbor animated sprite sheet + parallax city scene inside sandboxes\\pixi-suite via headless Playwright Chrome."
+    },
+    {
+      "id": 7,
+      "name": "PixiJS Filters",
+      "category": "godot-and-vfx",
+      "repo_url": "https://github.com/pixijs/filters.git",
+      "branch": "main",
+      "commit_short": "e9d1ca9",
+      "local_path": "G:\\AnimationLab\\godot-and-vfx\\pixijs-filters",
+      "license": "MIT",
+      "architecture": "TypeScript WebGL/WebGPU Shader Filter Pack for PixiJS v8",
+      "versions": {
+        "pixi-filters": "6.1.5",
+        "pixi.js": "8.23.0"
+      },
+      "install_status": "INSTALLED",
+      "functional_status": "WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\07_test_pixijs_filters.ps1",
+      "measured_timings": {},
+      "outputs": [
+        {
+          "path": "G:\\AnimationLab\\test-outputs\\07_pixijs-filters\\pixijs_filters_demo.mp4",
+          "bytes": 710766,
+          "ffprobe": { "codec": "h264", "width": 1280, "height": 720, "fps": "24/1", "frames": 48, "duration_s": 2.0 }
+        },
+        { "path": "G:\\AnimationLab\\test-outputs\\07_pixijs-filters\\pixijs_filters_frame.png", "bytes": 153730 },
+        { "path": "G:\\AnimationLab\\test-outputs\\07_pixijs-filters\\pixijs_filters_before_after.png", "bytes": 131981 }
+      ],
+      "workarounds_and_notes": "Verified GlowFilter, ShockwaveFilter, TwistFilter, and MotionBlurFilter cleanly on pixi.js@8.23.0."
+    },
+    {
+      "id": 8,
+      "name": "PixiJS Particle Emitter",
+      "category": "godot-and-vfx",
+      "repo_url": "https://github.com/pixijs-userland/particle-emitter.git",
+      "branch": "master",
+      "commit_short": "0fffdd9",
+      "local_path": "G:\\AnimationLab\\godot-and-vfx\\pixijs-particle-emitter",
+      "license": "MIT",
+      "architecture": "TypeScript Particle System Library",
+      "versions": {
+        "official_npm": "@pixi/particle-emitter@5.0.10 (BLOCKED on PixiJS 8)",
+        "community_port": "@barvynkoa/particle-emitter@0.0.1 / compiled v6.0.0 (WORKING on PixiJS 8)"
+      },
+      "install_status": "INSTALLED (BOTH OFFICIAL & COMMUNITY PORT TESTED)",
+      "functional_status": "PARTIALLY WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\08_test_pixijs_particle_emitter.ps1",
+      "measured_timings": {},
+      "outputs": [
+        {
+          "path": "G:\\AnimationLab\\test-outputs\\08_pixijs-particle-emitter\\particle_emitter_demo.mp4",
+          "bytes": 398502,
+          "ffprobe": { "codec": "h264", "width": 1280, "height": 720, "fps": "24/1", "frames": 48, "duration_s": 2.0 }
+        },
+        { "path": "G:\\AnimationLab\\test-outputs\\08_pixijs-particle-emitter\\particle_emitter_frame.png", "bytes": 67479 },
+        { "path": "G:\\AnimationLab\\test-outputs\\08_pixijs-particle-emitter\\official_v8_compat_test.log", "bytes": 4983 }
+      ],
+      "workarounds_and_notes": "Official @pixi/particle-emitter@5.0.10 fails esbuild/Node against PixiJS 8 with 6 unresolved split @pixi/* imports. Community port @barvynkoa/particle-emitter@0.0.1 works on pixi.js@8.23.0 (rendered peak 85 particles using generated 16x16 spark texture instead of PixiJS 8's 1x1 Texture.WHITE)."
+    },
+    {
+      "id": 9,
+      "name": "Pixelorama",
+      "category": "character-tools",
+      "repo_url": "https://github.com/Orama-Interactive/Pixelorama.git",
+      "branch": "master",
+      "commit_short": "5609dba",
+      "local_path": "G:\\AnimationLab\\character-tools\\pixelorama",
+      "license": "MIT",
+      "architecture": "Godot 4 GDScript Pixel Art Editor & Headless CLI Exporter",
+      "versions": {
+        "pixelorama": "v1.2.5-dev",
+        "godot_runtime": "4.7.2.stable"
+      },
+      "install_status": "INSTALLED (SOURCE PROJECT ON GODOT 4.7.2)",
+      "functional_status": "WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\09_test_pixelorama.ps1",
+      "measured_timings": {},
+      "outputs": [
+        { "path": "G:\\AnimationLab\\test-outputs\\09_pixelorama\\warrior_spritesheet.png", "bytes": 2594 },
+        { "path": "G:\\AnimationLab\\test-outputs\\09_pixelorama\\warrior_anim.json", "bytes": 2246 }
+      ],
+      "workarounds_and_notes": "Executed via installed Godot 4.7.2 console --headless --path character-tools\\pixelorama --quit -- --spritesheet --export --json --scale 4 on 4-frame 64x64 warrior_anim.gif."
+    },
+    {
+      "id": 10,
+      "name": "Godot Demo Projects",
+      "category": "godot-and-vfx",
+      "repo_url": "https://github.com/godotengine/godot-demo-projects.git",
+      "branch": "master",
+      "commit_short": "b761b4c",
+      "local_path": "G:\\AnimationLab\\godot-and-vfx\\godot-demo-projects",
+      "license": "MIT",
+      "architecture": "Official Godot 4 Demo Collection (executed with Godot 4.7.2)",
+      "versions": {
+        "godot": "4.7.2.stable"
+      },
+      "install_status": "INSTALLED",
+      "functional_status": "WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\10_test_godot_demo_projects.ps1",
+      "measured_timings": {
+        "render_s": 9.74
+      },
+      "outputs": [
+        {
+          "path": "G:\\AnimationLab\\test-outputs\\10_godot-demo-projects\\godot_demo.mp4",
+          "bytes": 2066955,
+          "ffprobe": { "codec": "h264", "width": 1152, "height": 648, "fps": "24/1", "frames": 96, "duration_s": 4.0, "audio": "aac 48000Hz stereo" }
+        },
+        { "path": "G:\\AnimationLab\\test-outputs\\10_godot-demo-projects\\godot_contact_sheet.png", "bytes": 544021 }
+      ],
+      "workarounds_and_notes": "Rendered 2d/particles demo via Godot 4.7.2 Vulkan Movie Maker (--write-movie --fixed-fps 24 --quit-after 96) and transcoded AVI to H.264 MP4."
+    },
+    {
+      "id": 11,
+      "name": "Depth Anything V2",
+      "category": "ai-and-depth",
+      "repo_url": "https://github.com/DepthAnything/Depth-Anything-V2.git",
+      "branch": "main",
+      "commit_short": "a561b84",
+      "local_path": "G:\\AnimationLab\\ai-and-depth\\depth-anything-v2",
+      "license": "Apache-2.0",
+      "architecture": "PyTorch Monocular Depth Estimation Model & Python Script",
+      "versions": {
+        "torch": "2.8.0+cu128",
+        "torchvision": "0.23.0+cu128",
+        "timm": "1.0.31",
+        "checkpoint": "depth_anything_v2_vits.pth (94.62 MB)"
+      },
+      "install_status": "INSTALLED",
+      "functional_status": "WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\11_test_depth_anything_v2.ps1",
+      "measured_timings": {
+        "pip_install_s": 313.12,
+        "inference_ms_initial": 94.8,
+        "inference_ms_rerun": 113.7,
+        "launcher_run_s": 6.09,
+        "peak_vram_mb": 413.9
+      },
+      "outputs": [
+        { "path": "G:\\AnimationLab\\test-outputs\\11_depth-anything-v2\\depth_gray.png", "bytes": 73090 },
+        { "path": "G:\\AnimationLab\\test-outputs\\11_depth-anything-v2\\depth_inferno.png", "bytes": 77809 },
+        { "path": "G:\\AnimationLab\\test-outputs\\11_depth-anything-v2\\depth_side_by_side.png", "bytes": 401912 }
+      ],
+      "workarounds_and_notes": "Pre-fetched SHA-256 verified cu128 wheels via IPv4 R2 curl after pip hung on CloudFront; inference runs cleanly on RTX 4060 CUDA in <115ms."
+    },
+    {
+      "id": 12,
+      "name": "Remotion",
+      "category": "engines",
+      "repo_url": "https://github.com/remotion-dev/remotion.git",
+      "branch": "main",
+      "commit_short": "970849f",
+      "local_path": "G:\\AnimationLab\\engines\\remotion",
+      "license": "Remotion Dual License (Free for individuals, non-profits & <=3-employee orgs; Company License otherwise)",
+      "architecture": "React/TypeScript Programmatic Video Framework",
+      "versions": {
+        "repo_version": "4.0.545",
+        "remotion_sandbox": "^4.0.0",
+        "react": "^18.3.1"
+      },
+      "install_status": "INSTALLED",
+      "functional_status": "WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\12_test_remotion.ps1",
+      "measured_timings": {
+        "render_s": 24.42
+      },
+      "outputs": [
+        {
+          "path": "G:\\AnimationLab\\test-outputs\\12_remotion\\remotion_demo.mp4",
+          "bytes": 497619,
+          "ffprobe": { "codec": "h264", "width": 1280, "height": 720, "fps": "30/1", "frames": 90, "duration_s": 3.0 }
+        },
+        { "path": "G:\\AnimationLab\\test-outputs\\12_remotion\\remotion_frame.png", "bytes": 274223 }
+      ],
+      "workarounds_and_notes": "Rendered AnimeTitleDemo via system Chrome (--browser-executable) and --concurrency=2 to respect 15.84 GB RAM."
+    },
+    {
+      "id": 13,
+      "name": "Rhubarb Lip Sync",
+      "category": "character-tools",
+      "repo_url": "https://github.com/DanielSWolf/rhubarb-lip-sync.git",
+      "branch": "master",
+      "commit_short": "9b9573c",
+      "local_path": "G:\\AnimationLab\\character-tools\\rhubarb-lip-sync",
+      "license": "MIT (+ BSD/Boost third-party acoustic/utility deps)",
+      "architecture": "C++ CLI Mouth-Shape Analyzer (Prebuilt Portable Windows Binary)",
+      "versions": {
+        "rhubarb": "1.14.0"
+      },
+      "install_status": "INSTALLED (PORTABLE BINARY 1.14.0)",
+      "functional_status": "WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\13_test_rhubarb_lip_sync.ps1",
+      "measured_timings": {
+        "dialog_analysis_s": 3.41,
+        "acoustic_analysis_s": 3.41
+      },
+      "outputs": [
+        { "path": "G:\\AnimationLab\\test-outputs\\13_rhubarb-lip-sync\\mouth_cues_dialog.json", "bytes": 3368 },
+        { "path": "G:\\AnimationLab\\test-outputs\\13_rhubarb-lip-sync\\mouth_cues.json", "bytes": 3419 },
+        {
+          "path": "G:\\AnimationLab\\test-outputs\\13_rhubarb-lip-sync\\rhubarb_preview.mp4",
+          "bytes": 377355,
+          "ffprobe": { "codec": "h264", "width": 1280, "height": 720, "fps": "24/1", "frames": 255, "duration_s": 10.643, "audio": "aac 16000Hz mono" }
+        },
+        { "path": "G:\\AnimationLab\\test-outputs\\13_rhubarb-lip-sync\\rhubarb_frame.png", "bytes": 46990 }
+      ],
+      "workarounds_and_notes": "Cloned repo with GIT_LFS_SKIP_SMUDGE=1 and executed official Rhubarb-Lip-Sync-1.14.0-Windows portable binary."
+    },
+    {
+      "id": 14,
+      "name": "WhisperX",
+      "category": "ai-and-depth",
+      "repo_url": "https://github.com/m-bain/whisperX.git",
+      "branch": "main",
+      "commit_short": "8d8e43b",
+      "local_path": "G:\\AnimationLab\\ai-and-depth\\whisperx",
+      "license": "BSD-2-Clause",
+      "architecture": "Python CUDA/CPU ASR + VAD + Wav2Vec2 Word-Level Forced Alignment",
+      "versions": {
+        "whisperx": "3.8.7rc1",
+        "faster-whisper": "1.2.1",
+        "ctranslate2": "4.9.1",
+        "pyannote-audio": "4.1.1",
+        "torch": "2.8.0+cu128",
+        "torchaudio": "2.8.0+cu128",
+        "torchcodec": "0.7.0"
+      },
+      "install_status": "INSTALLED",
+      "functional_status": "WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\14_test_whisperx.ps1",
+      "measured_timings": {
+        "pip_install_s": 558.48,
+        "initial_run_s": 34.4,
+        "launcher_rerun_s": 16.79
+      },
+      "outputs": [
+        { "path": "G:\\AnimationLab\\test-outputs\\14_whisperx\\speech_test.json", "bytes": 2861 },
+        { "path": "G:\\AnimationLab\\test-outputs\\14_whisperx\\speech_test.srt", "bytes": 209 },
+        { "path": "G:\\AnimationLab\\test-outputs\\14_whisperx\\speech_test.vtt", "bytes": 201 },
+        { "path": "G:\\AnimationLab\\test-outputs\\14_whisperx\\speech_test.tsv", "bytes": 172 },
+        { "path": "G:\\AnimationLab\\test-outputs\\14_whisperx\\speech_test.txt", "bytes": 137 },
+        { "path": "G:\\AnimationLab\\test-outputs\\14_whisperx\\cuda_run.log", "bytes": 3472 }
+      ],
+      "workarounds_and_notes": "Set HF_HUB_DISABLE_XET=1 (hf_xet throttled to 49 KB/s), staged local faster-whisper-small.en & wav2vec2 checkpoint via IPv4 curl, added torch\\lib to PATH; non-fatal torchcodec FFmpeg 4-7 warning safely ignored."
+    },
+    {
+      "id": 15,
+      "name": "Motion Canvas",
+      "category": "engines",
+      "repo_url": "https://github.com/motion-canvas/motion-canvas.git",
+      "branch": "main",
+      "commit_short": "7b91435",
+      "local_path": "G:\\AnimationLab\\engines\\motion-canvas",
+      "license": "MIT",
+      "architecture": "TypeScript Generator-Based 2D Motion Graphics Framework",
+      "versions": {
+        "@motion-canvas/core": "^3.17.2",
+        "@motion-canvas/2d": "^3.17.2",
+        "vite": "^5.4.11"
+      },
+      "install_status": "INSTALLED",
+      "functional_status": "WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\15_test_motion_canvas.ps1",
+      "measured_timings": {
+        "render_s": 8.91
+      },
+      "outputs": [
+        {
+          "path": "G:\\AnimationLab\\test-outputs\\15_motion-canvas\\motion_canvas_demo.mp4",
+          "bytes": 339827,
+          "ffprobe": { "codec": "h264", "width": 1280, "height": 720, "fps": "30/1", "frames": 92, "duration_s": 3.067 }
+        },
+        { "path": "G:\\AnimationLab\\test-outputs\\15_motion-canvas\\motion_canvas_frame.png", "bytes": 69411 }
+      ],
+      "workarounds_and_notes": "Pinned vite@^5.4.11 per peerDep, normalized CommonJS default export of @motion-canvas/vite-plugin in vite.config.ts under ESM, and automated headless #render export via Playwright Chrome."
+    },
+    {
+      "id": 16,
+      "name": "PySceneDetect",
+      "category": "ai-and-depth",
+      "repo_url": "https://github.com/Breakthrough/PySceneDetect.git",
+      "branch": "main",
+      "commit_short": "10f0abf",
+      "local_path": "G:\\AnimationLab\\ai-and-depth\\pyscenedetect",
+      "license": "BSD-3-Clause",
+      "architecture": "Python + OpenCV Scene Cut Detection CLI & Library",
+      "versions": {
+        "scenedetect": "0.7.4.dev0",
+        "opencv-python": "5.1.0.95"
+      },
+      "install_status": "INSTALLED",
+      "functional_status": "WORKING",
+      "launcher": "G:\\AnimationLab\\launchers\\16_test_pyscenedetect.ps1",
+      "measured_timings": {
+        "run_s": 1.08,
+        "processing_fps": 531.58
+      },
+      "outputs": [
+        { "path": "G:\\AnimationLab\\test-outputs\\16_pyscenedetect\\test_scene_cuts-Scenes.csv", "bytes": 406 },
+        { "path": "G:\\AnimationLab\\test-outputs\\16_pyscenedetect\\thumbs\\test_scene_cuts-Scene-001-01.jpg", "bytes": 87499 },
+        { "path": "G:\\AnimationLab\\test-outputs\\16_pyscenedetect\\thumbs\\test_scene_cuts-Scene-002-01.jpg", "bytes": 25717 },
+        { "path": "G:\\AnimationLab\\test-outputs\\16_pyscenedetect\\thumbs\\test_scene_cuts-Scene-003-01.jpg", "bytes": 45101 }
+      ],
+      "workarounds_and_notes": "Detected exact 3.000s and 6.000s cuts (3 x 72-frame scenes) across 216 frames of test_scene_cuts.mp4 at 531.58 FPS."
+    }
+  ]
+}

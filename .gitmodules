@@ -1,0 +1,48 @@
+[submodule "ai-and-depth-depth-anything-v2"]
+	path = ai-and-depth/depth-anything-v2
+	url = https://github.com/DepthAnything/Depth-Anything-V2.git
+[submodule "ai-and-depth-pyscenedetect"]
+	path = ai-and-depth/pyscenedetect
+	url = https://github.com/Breakthrough/PySceneDetect.git
+[submodule "ai-and-depth-whisperx"]
+	path = ai-and-depth/whisperx
+	url = https://github.com/m-bain/whisperX.git
+[submodule "character-tools-pixelorama"]
+	path = character-tools/pixelorama
+	url = https://github.com/Orama-Interactive/Pixelorama.git
+[submodule "character-tools-rigby2d"]
+	path = character-tools/rigby2d
+	url = https://github.com/jaisurya-dev-art/rigby2d.git
+[submodule "engines-manim"]
+	path = engines/manim
+	url = https://github.com/3b1b/manim.git
+[submodule "experimental-anidoodle"]
+	path = experimental/anidoodle
+	url = https://github.com/alexgreensh/anidoodle.git
+[submodule "experimental-huashu-art-motion"]
+	path = experimental/huashu-art-motion
+	url = https://github.com/alchaincyf/huashu-art-motion.git
+[submodule "experimental-lemo-opuscar"]
+	path = experimental/lemo-opuscar
+	url = https://github.com/lemomo-ai/lemo-opuscar.git
+[submodule "_archive-repos-godot-demo-projects"]
+	path = _archive/repos/godot-demo-projects
+	url = https://github.com/godotengine/godot-demo-projects.git
+[submodule "_archive-repos-motion-canvas"]
+	path = _archive/repos/motion-canvas
+	url = https://github.com/motion-canvas/motion-canvas.git
+[submodule "_archive-repos-pixijs"]
+	path = _archive/repos/pixijs
+	url = https://github.com/pixijs/pixijs.git
+[submodule "_archive-repos-pixijs-filters"]
+	path = _archive/repos/pixijs-filters
+	url = https://github.com/pixijs/filters.git
+[submodule "_archive-repos-pixijs-particle-emitter"]
+	path = _archive/repos/pixijs-particle-emitter
+	url = https://github.com/pixijs-userland/particle-emitter.git
+[submodule "_archive-repos-remotion"]
+	path = _archive/repos/remotion
+	url = https://github.com/remotion-dev/remotion.git
+[submodule "_archive-repos-rhubarb-lip-sync"]
+	path = _archive/repos/rhubarb-lip-sync
+	url = https://github.com/DanielSWolf/rhubarb-lip-sync.git
