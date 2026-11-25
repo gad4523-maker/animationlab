@@ -3,6 +3,8 @@
 Deterministic, JSON-driven `1080×1920 @ 30 fps` multi-engine YouTube Shorts pipeline designed for Windows 11 + NVIDIA RTX 4060 (8 GB VRAM) / 16 GB RAM.
 
 > **Content Policy:** Generative AI image and video tools are prohibited for **all visual assets and footage**, including sprites, sprite sheets, textures, backgrounds, concept art and individual frames. Use original programmatic/procedural artwork, manually created assets, or properly licensed human-made art. Animate through supported engines (Three.js/Canvas2D, Godot, Blender, etc.); no static-image slideshows. Narration TTS and audio tools remain allowed.
+>
+> **Primary anime art direction:** HD-2D pixel cinema (crisp pixel sprites, real scene depth and motivated parallax); see [the director guide](../.agents/skills/anime-shorts-director/references/hd2d-pixel-cinema.md). Keep the genre and camera pacing scene-specific. Only switch visual style when the user requests it. This is not an engine enum or hardcoded look for the existing non-anime demos.
 
 ---
 

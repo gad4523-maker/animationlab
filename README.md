@@ -77,9 +77,9 @@ node "G:\AnimationLab\templates\threejs-short-starter\render.mjs"
 
 ---
 
-## 4. Anime HD-2D look and camera language
+## 4. Primary art direction: HD-2D pixel cinema
 
-The [HD-2D pixel cinema guide](.agents/skills/anime-shorts-director/references/hd2d-pixel-cinema.md) adds a selectable layered pixel-anime style and story-aware camera pacing. Both render pipelines now use time-aware smooth camera motion with optional holds. Other art styles remain available.
+**Default for new anime Shorts:** cinematic HD-2D pixel art, with consistent crisp sprites, layered depth, real parallax and motivated camera movement. The [HD-2D guide](.agents/skills/anime-shorts-director/references/hd2d-pixel-cinema.md) directs the look. **Genre is never hardcoded**: action, comedy, thriller and drama use different lighting, shot rhythm and acting. Three.js, PixiJS, Blender and the other renderers remain available, and the user can explicitly choose another art style. This is an art-direction default, not a new engine or episode JSON schema field.
 
 ## 5. Animation skills and asset policy
 
