@@ -2,7 +2,7 @@
 
 Deterministic, JSON-driven `1080×1920 @ 30 fps` multi-engine YouTube Shorts pipeline designed for Windows 11 + NVIDIA RTX 4060 (8 GB VRAM) / 16 GB RAM.
 
-> **Content Policy:** Finished Shorts must be animated with the pipeline (Three.js/Canvas2D, Godot, Blender or other supported animation tools). AI-generated **individual sprites, sprite sheets, textures, backgrounds and other still assets are allowed** as scene components, subject to license/rights checks. **Do not use fully AI-generated video shots or substitute still-image slideshows for animation.** Honor stricter per-episode requirements.
+> **Content Policy:** Generative AI image and video tools are prohibited for **all visual assets and footage**, including sprites, sprite sheets, textures, backgrounds, concept art and individual frames. Use original programmatic/procedural artwork, manually created assets, or properly licensed human-made art. Animate through supported engines (Three.js/Canvas2D, Godot, Blender, etc.); no static-image slideshows. Narration TTS and audio tools remain allowed.
 
 ---
 
